@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main() {
     
-    int sub_1, sub_2, sub_3, sub_4, sub_5; 
+    int sub_1, sub_2, sub_3, sub_4, sub_5, total; 
     float percentage;
    
     printf("\t\t** percentage Calculator. **");
@@ -16,10 +16,10 @@ int main() {
     printf("\nEnter Your Fifth Subject Marks: ");
     scanf("%d", &sub_5);
   
-    printf("\nSum of all Subject Marks: %d", sub_1+sub_2+sub_3+sub_4+sub_5);
-  
-    percentage = (float)(sub_1+sub_2+sub_3+sub_4+sub_5)/5;
-   
+    total = sub_1+sub_2+sub_3+sub_4+sub_5;
+    percentage = total/5;
+
+    printf("\nSum of all Subject Marks: %d", total);
     printf("\nYour Percentage is: %.2f\n", percentage);
 
     printf("\n\n** Thank You For Using This Calculator **");
