@@ -8,7 +8,7 @@ int main(){
     scanf("%d",&num);
 
     // logic
-    a = num/1; // return first two digit from number
+    a = num/10; // return first two digit from number
     middle_num = a%10; // return middle number
 
     square = middle_num * middle_num; // square of middle number
