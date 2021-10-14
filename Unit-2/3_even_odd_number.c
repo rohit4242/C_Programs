@@ -11,12 +11,7 @@ int main(){
 
         printf("\n%d is even Number", num);
     }
-    // else if(num_2>num_1){
-
-    //     printf("\nYour Maximum Number is: %d", num_2);
-    //     printf("\nYour Minimum Number is: %d", num_1);
-
-    // }
+   
     else {
         printf("\n%d is odd Number", num);
     }
