@@ -6,7 +6,7 @@ that number.*/
 
 int main(){
 
-    int i, num, sum=0, temp;
+    int i, num, rev=0, temp;
 
     printf("\nEnter Your Number: ");
     scanf("%d", &num);
@@ -14,10 +14,10 @@ int main(){
     while (num>0){
 
         temp = num%10;
-        sum = (sum*10)+temp;
+        rev = (rev*10)+temp;
         num = num/10;
     } 
-    printf("\nYour Total Sum is: %d", sum);
+    printf("\nYour Reverse Number is: %d", rev);
 
     return 0;
 }
