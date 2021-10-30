@@ -1,8 +1,8 @@
 /*28. Write a program to find out prime numbers up to user
 series.*/
 
-/*27. Write a program that input number and find out number is
-Prime or not.*/
+
+
 
 
 #include <stdio.h>
@@ -26,7 +26,7 @@ int main(){
         if(x==2){
             printf("%d ",i);
         }
-    }
+    
      
     return 0;
 }
