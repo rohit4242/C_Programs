@@ -21,7 +21,7 @@ int main(){
     {
         for(j=0;j<=i;j++)
         {
-            printf(" %c ",s[j]);
+            printf(" %c ",s[i]);
         }
         printf("\n");
     }
