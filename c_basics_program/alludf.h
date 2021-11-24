@@ -83,7 +83,31 @@ int armstrong(int x)
     return sum;
 }
 
+int prime(int x)
+{
+    int i, temp =0;
+    for (i=2;i<=x/2;i++)
+    {
+        if(x%i==0)
+        {
+            temp = 1;
+        }
+    }
+    return temp;
+}
 
+void fibonacci(int x)
+{
+    int first_num=0, second_num=1, next;
 
-
+    printf("Your Fibonacci Series is: %d %d ",first_num,second_num);
+    next = first_num+second_num;
+    while(next<=x)
+    {
+        printf("%d ",next);
+        first_num = second_num;
+        second_num = next;
+        next = first_num+second_num;
+    }
+}
 
