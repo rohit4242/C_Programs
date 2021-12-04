@@ -30,7 +30,7 @@ int fact(int x)
     }
     return fact;
 }
-
+ 
 int reverse_num(int x)
 {
     int i, sum = 0, temp;
@@ -164,8 +164,42 @@ float fahrenheit_to_celsius(int x)
     return (x-32)*5/9;
 }
 
+int lcm(int x, int y)
+{
+    int a, b;
+    a = x; 
+    b = y;
+    while (a!=b)
+    {
+        if(a<b)
+        {
+            a+=x;
+        }
+        else 
+        {
+            b+=y;
+        }
+    }
+    return a;
+}
 
-
-
+int hcf(int x, int y)
+{
+    int a, b;
+    a = x; 
+    b = y;
+    while (a!=b)
+    {
+        if(a>b)
+        {
+            a-=b;
+        }
+        else 
+        {
+            b-=a;
+        }
+    }
+    return a;
+}
 
 
