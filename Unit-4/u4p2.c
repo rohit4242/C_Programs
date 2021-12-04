@@ -6,7 +6,7 @@ int main(){
 
     int n, a[50], sum=0, avg;
     
-    printf("\nEnter The Number Of Elements: ");
+    printf("\nEnter The Number Of Elements(0-50): ");
     scanf("%d",&n);
 
     for(int i = 0; i<n;i++)
