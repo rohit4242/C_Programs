@@ -209,3 +209,64 @@ int gcd(int a, int b)
     return gcd(b, a%b);
 }
 
+int max_of_array(int num[], int N)
+{
+    int max = num[0];
+
+    for(int i=0;i<N;i++)
+    {
+        if(num[i]>max)
+        {
+            max = num[i];
+        }
+    }
+    return max;
+}
+
+int min_of_array(int num[], int N)
+{
+    int min = num[0];
+
+    for(int i=0;i<N;i++)
+    {
+        if(num[i]<min)
+        {
+            min = num[i];
+        }
+    }
+    return min;
+}
+
+int check_str_palindrome(char str[])
+{
+    int len, temp = 0;
+    len = strlen(str);
+
+    for(int i=0;i<len;i++)
+    {
+        if(str[i]!=str[len-i-1])
+        {
+            temp =1;
+            break;
+        }
+    }
+    return temp;
+}
+
+int strlength(char str[])
+{
+    int len=0;
+    for(int i=0;str[i]!='\0';i++)
+    {
+        len++;
+    }
+    return len;
+}
+
+
+
+
+
+
+
+
