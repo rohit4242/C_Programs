@@ -3,33 +3,54 @@
 #include <stdio.h>
 int main()
 {
-    int N,arr1[50],arr2[50],sum[50];
+    int r, c, arr1[2][3],arr2[2][3],sum[2][3];
 
-    printf("\nEnter Numbers of Elements: ");
-    scanf(" %d",&N);
+    printf("\nEnter Numbers of Rows: ");
+    scanf(" %d",&r);
+    printf("\nEnter Numbers of Columns: ");
+    scanf(" %d",&c);
 
-    for(int i=0;i<N;i++)
+    for(int i=0;i<r;i++)
     {
-        printf("\nEnter value of arr1[%d]: ",i);
-        scanf(" %d",&arr1[i]);
+        for(int j=0;j<c;j++)
+        {
+            printf("\nEnter value of arr1[%d][%d]: ",i,j);
+            scanf(" %d",&arr1[i][j]);
+        }
     }
     
     printf("\n============================");
 
-    for(int i=0;i<N;i++)
+   
+    for(int i=0;i<r;i++)
     {
-        printf("\nEnter value of arr2[%d]: ",i);
-        scanf(" %d",&arr2[i]);
-    }
-    for(int i=0;i<N;i++)
-    {
-        sum[i] = arr1[i]+arr2[i];
+        for(int j=0;j<c;j++)
+        {
+            printf("\nEnter value of arr2[%d][%d]: ",i,j);
+            scanf(" %d",&arr2[i][j]);
+        }
     }
 
-    for(int i=0;i<N;i++)
+    
+    for(int i=0;i<r;i++)
     {
-        printf("\nsum[%d] = %d",i,sum[i]);
+        for(int j=0;j<c;j++)
+        {
+            sum[i][j] = arr1[i][j]+arr2[i][j];
+
+        }
     }
+
+    for(int i=0;i<r;i++)
+    {
+        for(int j=0;j<c;j++)
+        {
+            printf("\nsum[%d][%d] = %d",i,j,sum[i][j]);
+
+        }
+    }
+
+
 
     return 0;
 }
