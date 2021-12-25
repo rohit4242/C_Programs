@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <conio.h>
+#include <string.h>
 
 int sum(int x, int y)
 {
@@ -33,7 +34,7 @@ int fact(int x)
  
 int reverse_num(int x)
 {
-    int i, sum = 0, temp;
+    int sum = 0, temp;
 
     while(x>0) 
     {
@@ -46,7 +47,7 @@ int reverse_num(int x)
 
 int sum_of_num(int x)
 {
-    int i, sum = 0, temp;
+    int sum = 0, temp;
 
     while(x>0)
     {
@@ -59,7 +60,7 @@ int sum_of_num(int x)
 
 int palindrome(int x)
 {
-    int i, sum = 0, temp;
+    int sum = 0, temp;
 
     while(x>0)
     {
@@ -72,7 +73,7 @@ int palindrome(int x)
 
 int armstrong(int x)
 {
-    int i, sum = 0, temp;
+    int sum = 0, temp;
 
     while(x>0)
     {
@@ -263,10 +264,29 @@ int strlength(char str[])
     return len;
 }
 
+void swap(int *a, int *b)
+{
+    int temp;
 
+    temp = *a;
+    *a = *b;
+    *b = temp;
+}
 
+void area_of_circle_using_pointer(int r, float *a,float *d, float *c)
+{
+    *a = 3.14159*r*r;
+    *d = 2*r;
+    *c = 2*3.14159*r;
+}
 
+int sum_first_and_last_digit(int x)
+{
+    int first_num, last_num, sum; 
 
-
-
-
+    first_num = x /1000;
+    last_num = x % 10;
+    sum = first_num + last_num;
+    
+    return sum;
+}
