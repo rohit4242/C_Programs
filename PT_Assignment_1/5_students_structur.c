@@ -12,57 +12,56 @@ struct student
 {
     int roll_no;
     int marks;
-    char first_name[10];
-    char last_name[10];
-    char mobile_no[10];
-};
+    char name[10];
+}s1;
+
 void add()
 {
-    FILE  *fp=NULL;
-    struct student s1;
+    FILE  *fp;
+    int n,i;
 
-    fp = fopen("record.txt","wb");
+    fp = fopen("student_record.txt","ab");
     if(fp == NULL)
     {
         printf("\nError opening file");
     }
-    printf("\nEnter Student Details");
+    printf("\nEnter how many records add: ");
+    scanf("%d",&n);
 
-    printf("\nEnter Roll No:");
-    scanf("%d",&s1.roll_no);
-    fflush(stdin);
-    printf("\nEnter First Name:");
-    gets(s1.first_name);
-    printf("\nEnter last Name:");
-    gets(s1.last_name);
-    printf("\nEnter Mobile Number:");
-    gets(s1.mobile_no);
-    printf("\nEnter Your Marks:");
-    scanf("%d",&s1.marks);
-
-    fwrite(&s1,sizeof(s1),1,fp);
+    for(i=0;i<n;i++)
+    {
+        printf("\nEnter Details of Student %d",i+1);
+        printf("\n===========================");
+        fflush(stdin);
+        printf("\nEnter Your Name:");
+        gets(s1.name);
+        printf("\nEnter Roll No:");
+        scanf("%d",&s1.roll_no);
+        printf("\nEnter Your Marks:");
+        scanf("%d",&s1.marks);
+        
+        fwrite(&s1,sizeof(s1),1,fp);
+    }
     fclose(fp);
+    
 }
+
 void view()
 {
-    FILE  *fp=NULL;
-    struct student s1;
+    FILE  *fp;
 
-    fp = fopen("record.txt","rb");
+    fp = fopen("student_record.txt","rb");
     if(fp == NULL)
     {
         printf("\nError opening file");
     }
     while(fread(&s1,sizeof(s1),1,fp)==1)
     {
-    printf("\nRoll No: %d",&s1.roll_no);
-    printf("\nFirst Name:",&s1.first_name);
-    printf("\nEnter last Name:");
-    printf("\nlast Name:",&s1.last_name);
-    printf("\nMobile Number:",&s1.mobile_no);
-    printf("\nYour Marks: %d",&s1.marks);
+        printf("\n=======================");
+        printf("\nStudent Name: %s",s1.name);
+        printf("\nRoll No: %d",s1.roll_no);
+        printf("\nYour Marks: %d",s1.marks);
     }
-
     fclose(fp);
 }
 
