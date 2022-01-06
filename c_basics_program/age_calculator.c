@@ -1,7 +1,7 @@
 // claculate age of two dates.
 
 #include <stdio.h>
-#include <stdlib.h>
+//#include <stdlib.h>
 
 void age_calculator(int c_day,int c_month, int c_year,int b_day,int b_month,int b_year)
 {
