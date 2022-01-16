@@ -290,3 +290,32 @@ int sum_first_and_last_digit(int x)
     
     return sum;
 }
+
+typedef struct current_date_and_birth_date
+{
+    int day, month,year; 
+    char name[20];
+}date;
+
+void age_calculator(date a, date b)
+{
+    int day, month,year;
+
+    if(a.day>b.day)
+    {
+        b.day = b.day + 30;
+        b.month = b.month - 1;
+    }
+    if(a.month>b.month)
+    {
+        b.year = b.year - 1;
+        b.month = b.month + 12;
+    }
+
+    day = b.day - a.day;
+    month = b.month - a.month;
+    year = b.year - a.year;
+
+    printf("\n%s Your age is: %d year %d month and %d days",a.name,year,month,day);
+
+}
