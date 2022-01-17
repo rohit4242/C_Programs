@@ -5,12 +5,6 @@ content on screen. */
 
 int main()
 {
-    add();
-    view();
-    return 0;
-}
-void add()
-{
     FILE  *fp;
     int n,i;
     int roll_no;
@@ -37,25 +31,15 @@ void add()
         printf("\nEnter Your Marks:");
         scanf("%d",&marks);
         
-        fprintf(fp,"%s %d %d",name,roll_no,marks);
+        fprintf(fp,"%s %d %d\n",name,roll_no,marks);
     }
-    fclose(fp);
-    
-}
-
-void view()
-{
-    FILE  *fp;
-    int roll_no;
-    int marks;
-    char name[10];
 
     fp = fopen("stu.txt","rb");
     if(fp == NULL)
     {
         printf("\nError opening file");
     }
-    while(fscanf(fp,"%s %d %d",name,&roll_no,&marks)!=EOF)
+    while(fscanf(fp,"%s %d %d\n",name,&roll_no,&marks)!=EOF)
     {
         printf("\n=======================");
         printf("\nStudent Name: %s",name);
@@ -63,6 +47,7 @@ void view()
         printf("\nYour Marks: %d",marks);
     }
     fclose(fp);
+
 }
 
 
