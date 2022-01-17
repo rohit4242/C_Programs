@@ -2,11 +2,16 @@
 in file “cleancity.txt” */
 
 #include <stdio.h>
-
+#include <stdlib.h>
 int main()
 {
     FILE  *fp1,*fp2;
-    char ch[50];
+    int *ptr, n;
+
+    printf("\nEnter length of String: ");
+    scanf("%d",&n);
+
+    ptr = (int*)calloc(n,sizeof(int));
 
     if((fp1=fopen("greencity.txt","r"))==NULL)
     {
@@ -19,10 +24,10 @@ int main()
         exit(1);
     }
     
-    while(fgets(ch,50,fp1)!=NULL)
+    while(fgets(ptr,ptr,fp1)!=NULL)
     {
-        strrev(ch);
-        fputs(ch,fp2);
+        strrev(ptr);
+        fputs(ptr,fp2);
     }
 
     fclose(fp1);
