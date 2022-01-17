@@ -1,7 +1,6 @@
 /* 9. Write a program to write string in “greencity.txt” and print it in reverse order
 in file “cleancity.txt” */
 
-
 #include <stdio.h>
 
 int main()
@@ -19,10 +18,11 @@ int main()
         printf("\nError opening cleancity.txt file");
         exit(1);
     }
-
-    while(fscanf(fp1,"%s",&ch)!=EOF)
+    
+    while(fgets(ch,50,fp1)!=NULL)
     {
-        fprintf(fp2,"%s ",ch);
+        strrev(ch);
+        fputs(ch,fp2);
     }
 
     fclose(fp1);
