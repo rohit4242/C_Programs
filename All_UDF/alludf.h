@@ -17,10 +17,10 @@ int mul(int x, int y)
     return x * y;
 }
 
-int div(int x, int y)
-{
-    return x / y;
-}
+// int div(int x, int y)
+// {
+//     return x / y;
+// }
 
 int fact(int x)
 {
@@ -114,7 +114,7 @@ void fibonacci(int x)
 
 int interest(int x, int y, int z)
 {
-    return  x*y*z/100;
+    return (float)  x*y*z/100;
 }
 
 void area_of_circle(int x)
