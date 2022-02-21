@@ -7,12 +7,12 @@ int main(){
 
     int i, num, sum;
 
-    for (i=1;i<=10;i++){
-
-    printf("\nEnter Number %d : ", i);
-    scanf("%d", &num);
-
-    sum = sum+num;
+    for (i=1;i<=10;i++)
+    {
+        
+        printf("\nEnter Number %d : ", i);
+        scanf("%d", &num);
+        sum = sum+num;
 
     } 
     printf("\nYour Total Sum is: %d", sum);

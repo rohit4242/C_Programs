@@ -20,8 +20,9 @@ int main(){
         while (temp!=0){
 
             x = temp%10;
-            temp = temp/10;
             sum = sum +(x*x*x);
+            temp = temp/10;
+
 
         }
     
@@ -31,7 +32,7 @@ int main(){
         }
     }
     
-printf("\n");
+// printf("\n");
 
     return 0;
 }
